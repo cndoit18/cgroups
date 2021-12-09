@@ -74,6 +74,10 @@ func (c *cpuController) Create(path string, resources *specs.LinuxResources) err
 				name:   "cfs_quota_us",
 				ivalue: cpu.Quota,
 			},
+			{
+				name:   "bvt_warp_ns",
+				ivalue: cpu.Identity,
+			},
 		} {
 			var value []byte
 			if t.uvalue != nil {
